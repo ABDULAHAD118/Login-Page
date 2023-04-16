@@ -11,6 +11,60 @@
             background: url(bg.jpg) no-repeat center center/cover;
         }
 
+
+        #navbar {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(231, 160, 68);
+            width: 100%;
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+        .heading {
+            padding-left: 50px;
+            font-size: 34px;
+            margin: 0px;
+            font-family: 'Merriweather', serif;
+        }
+
+            .heading:hover {
+                cursor: pointer;
+            }
+
+        #navbar ul {
+            padding-right: 30px;
+            display: flex;
+            list-style: none;
+        }
+
+            #navbar ul li {
+                font-size: 22px;
+                padding: 11px 3px;
+            }
+
+                #navbar ul li a {
+                    font-family: 'Rubik', sans-serif;
+                    text-decoration: none;
+                    color: #ffffff;
+                    padding: 8px;
+                    transition: all .5s;
+                }
+
+                    #navbar ul li a:hover {
+                        border-radius: 6px;
+                        /* font-weight: bold; */
+                        background-color: #d65106;
+                    }
+
+        a:visited {
+            border-radius: 6px;
+            font-weight: bold;
+            background-color: #d65106;
+        }
+
         .loginpage {
             display: flex;
             justify-content: center;
@@ -22,13 +76,25 @@
             height: 100vh;
         }
 
+        .block {
+            display: contents;
+        }
+
+        .bg {
+            background-color: #ffffffad;
+            padding: 66px;
+            border-radius:38px;
+            padding-right:120px;
+        }
+
         .center input {
+            background-color:transparent;
             display: flex;
             flex-direction: column;
-            width: 110%;
+            width: 122%;
             /* margin: 4px 0px;*/
-            padding: 3px;
-            font-size: 20px;
+            padding: 6px 3px;
+            font-size: 15px;
             border: 2px solid black;
             border-radius: 6px;
         }
@@ -39,41 +105,64 @@
         }
 
         #submit {
-            width: 113%;
+            width: 127%;
             margin: 4px 0px;
-            padding: 3px;
+            padding: 5px;
             font-size: 21px;
             border: 2px solid black;
             border-radius: 5px;
+            border: none;
+            background-color: #afa9a7b3;
+        }
+        #submit:hover{
+            font-weight:bold;
+        }
+        #view:hover{
+            cursor:pointer;
         }
 
         i {
             position: relative;
-            right: -258px;
+            right: -235px;
             top: -24px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <nav id="navbar">
+            <h1 class="heading">LOGIN PAGE</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="loginpage">
         <form action="login.php" class="login">
-            <div>
+            <div class="bg">
                 <div class="center">
                     <label>Enter The Email:</label>
                     <input type="email" required />
                     <i class="fa-solid fa-envelope"></i>
                 </div>
-                <div class="center">
+                <div class="center block">
                     <label>Enter The Password:</label>
                     <input type="password" required />
-                    <i class="fa-solid fa-eye " id="view"></i>
+                    <a onclick="view()"><i class="fa-solid fa-eye " id="view"></i></a>
 
                 </div>
-                <input type="submit" id="submit" value="Log In"/>
+
+                <button type="submit" id="submit">Login</button>
             </div>
         </form>
     </div>
-    <script src="https://kit.fontawesome.com/abeaec3c5b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/abeaec3c5b.js" crossorigin="anonymous">
+        view()
+    </script>
 </body>
 </html>
 <!--<i class="fa-sharp fa-solid fa-eye-slash"></i>-->
