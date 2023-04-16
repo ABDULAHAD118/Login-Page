@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0px 0px;
+            padding: 0px 0px;
+            background: url(bg.jpg) no-repeat center center/cover;
+        }
+
+        .loginpage {
+            display: flex;
+            justify-content: center;
+        }
+
+        .login {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .center input {
+            display: flex;
+            flex-direction: column;
+            width: 110%;
+            /* margin: 4px 0px;*/
+            padding: 3px;
+            font-size: 20px;
+            border: 2px solid black;
+            border-radius: 6px;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #submit {
+            width: 113%;
+            margin: 4px 0px;
+            padding: 3px;
+            font-size: 21px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        i {
+            position: relative;
+            right: -258px;
+            top: -24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loginpage">
+        <form action="login.php" class="login">
+            <div>
+                <div class="center">
+                    <label>Enter The Email:</label>
+                    <input type="email" required />
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="center">
+                    <label>Enter The Password:</label>
+                    <input type="password" required />
+                    <i class="fa-solid fa-eye " id="view"></i>
+
+                </div>
+                <input type="submit" id="submit" value="Log In"/>
+            </div>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/abeaec3c5b.js" crossorigin="anonymous"></script>
+</body>
+</html>
+<!--<i class="fa-sharp fa-solid fa-eye-slash"></i>-->
